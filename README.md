@@ -8,6 +8,9 @@ After installing it, put this in your Rakefile:
 
     begin
       require 'sdoc_helpers'
+      Rake::SDocTask.new do |rdoc|
+        rdoc.title = "My Library Documentation"
+      end
     rescue LoadError
       puts "sdoc support not enabled. Please gem install sdoc-helpers."
     end
