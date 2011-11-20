@@ -1,4 +1,4 @@
-require 'rake/rdoctask'
+require 'rdoc/task'
 
 module Rake
   # Just a customized version of the normal RDoc task for generating SDocs.
@@ -12,7 +12,7 @@ module Rake
       @rdoc_dir = 'docs'
       @main = Dir['README*'].first
       @title = nil
-      @template = 'direct'
+      @template = 'sdoc'
       @external = false
       @inline_source = true
       @options = ['--fmt', 'shtml']
